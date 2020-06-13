@@ -41,7 +41,24 @@ function map(arr,callback){
   
   reduce(src,sumation)
   
-  
+ // let src = [1,2,3]
+  function reduce(src,callback,stValue){
+    let accum = stValue
+  let i = accum ?  0 : 1
+  let a = accum ? accum +src[0]  :src[0]
+  for (; i< src.length ; i++){
+  let element = src[i]
+  accum  =  callback(accum,element)
+  }
+  // else {
+  //   accum = src[0]
+  //   for (let i = 1 ; i< src.length ; i++){
+  // let element = src[i]
+  // accum  =  callback(accum,element)
+  // }
+  // }
+  return accum ;
+  }
   
   
   
